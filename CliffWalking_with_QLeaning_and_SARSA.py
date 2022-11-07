@@ -129,7 +129,7 @@ class robot():
                     
             else:
                         
-                self.Q_table[self.state][action] += alpha*(reward+gamma*(expected_value-self.Q_table[self.state][action]))
+                self.Q_table[self.state][action] += alpha*(reward+gamma*expected_value-self.Q_table[self.state][action])
                         
                 self.state = new_state
 
@@ -151,16 +151,6 @@ class robot():
             algorithm(epsilon)
 
             self.lst.append(sum(self.Q_table[7]))
-
-
-
-
-
-
-
-
-
-
 
 my_robot = robot()
 my_robot2 = robot()
