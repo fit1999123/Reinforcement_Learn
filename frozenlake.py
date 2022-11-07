@@ -67,7 +67,7 @@ def Q_learning(epsilon):
             
         else:
                 
-            Q_table[state][action] += alpha*(reward+gamma*(Q_table[new_state][next_action]-Q_table[state][action]))
+            Q_table[state][action] += alpha*(reward+gamma*Q_table[new_state][next_action]-Q_table[state][action])
                 
             state = new_state
              
